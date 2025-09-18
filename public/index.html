@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemesanan Tiket Pesawat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pemesanan Tiket Pesawat</h1>
+      <form id="form">
+        <input id="name" placeholder="Nama" required />
+        <input id="email" type="email" placeholder="Email" required />
+        <select id="destination" required></select>
+        <input id="passengers" type="number" value="1" min="1" required />
+        <select id="payment">
+          <option value="cash">Cash</option>
+          <option value="transfer">Transfer Bank</option>
+          <option value="ewallet">E-Wallet</option>
+        </select>
+        <button type="submit">Pesan Tiket</button>
+      </form>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      // Jalankan setelah HTML siap
+      document.addEventListener("DOMContentLoaded", () => {
+        const destinations = [
+          { code: "MY", name: "Malaysia (Kuala Lumpur)", price: 900000 },
+          { code: "SG", name: "Singapore (Changi)", price: 1500000 },
+          { code: "TH", name: "Thailand (Bangkok)", price: 1200000 },
+          { code: "JP", name: "Japan (Tokyo)", price: 5500000 },
+          { code: "SA", name: "Saudi Arabia (Jeddah)", price: 3500000 },
+          { code: "US", name: "United States (Los Angeles)", price: 15000000 },
+          { code: "AU", name: "Australia (Sydney)", price: 10000000 },
+        ];
+
+        const select = document.getElementById("destination");
+        destinations.forEach((c) => {
+          const opt = document.createElement("option");
+          opt.value = c.code;
+          opt.textContent = `${c.name} - Rp${c.price.toLocaleString("id-ID")}`;
+          select.appendChild(opt);
+        });
+
+        document.getElementById("form").addEventListener("submit", (e) => {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const destCode = document.getElementById("destination").value;
+          const passengers = Number(
+            document.getElementById("passengers").value
+          );
+          const payment = document.getElementById("payment").value;
+
+          const dest = destinations.find((d) => d.code === destCode);
+          const total = dest.price * passengers;
+
+          document.getElementById("result").innerHTML = `
+          <h3>Pesanan Berhasil!</h3>
+          <p>Nama: ${name}</p>
+          <p>Email: ${email}</p>
+          <p>Tujuan: ${dest.name}</p>
+          <p>Jumlah Penumpang: ${passengers}</p>
+          <p>Total: Rp${total.toLocaleString("id-ID")}</p>
+          <p>Metode Bayar: ${payment}</p>
+        `;
+        });
+      });
+    </script>
+  </body>
+</html>

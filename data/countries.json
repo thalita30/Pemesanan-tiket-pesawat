@@ -1,0 +1,9 @@
+[
+  { "code": "MY", "name": "Malaysia (Kuala Lumpur)", "price": 900000 },
+  { "code": "SG", "name": "Singapore (Changi)", "price": 1500000 },
+  { "code": "TH", "name": "Thailand (Bangkok)", "price": 1200000 },
+  { "code": "JP", "name": "Japan (Tokyo)", "price": 5500000 },
+  { "code": "SA", "name": "Saudi Arabia (Jeddah)", "price": 3500000 },
+  { "code": "US", "name": "United States (Los Angeles)", "price": 15000000 },
+  { "code": "AU", "name": "Australia (Sydney)", "price": 10000000 }
+]

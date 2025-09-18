@@ -1,0 +1,35 @@
+[
+  {
+    "id": "493eef82-c49a-4b62-a3cf-db6df1a6cdad",
+    "name": "thalita",
+    "email": "thalitaade01@gmail.com",
+    "destination": "Thailand (Bangkok)",
+    "passengers": 1,
+    "pricePer": 1200000,
+    "total": 1200000,
+    "paymentMethod": "cash",
+    "createdAt": "2025-09-18T04:42:52.660Z"
+  },
+  {
+    "id": "07694966-248d-4df8-a200-7d7db1548052",
+    "name": "thalita",
+    "email": "thalitaade01@gmail.com",
+    "destination": "Malaysia (Kuala Lumpur)",
+    "passengers": 1,
+    "pricePer": 900000,
+    "total": 900000,
+    "paymentMethod": "cash",
+    "createdAt": "2025-09-18T04:47:45.803Z"
+  },
+  {
+    "id": "2055c794-2975-4873-aa7f-a59c4c6b6e26",
+    "name": "thalitnova",
+    "email": "thalitaade01@gmail.com",
+    "destination": "Australia (Sydney)",
+    "passengers": 1,
+    "pricePer": 10000000,
+    "total": 10000000,
+    "paymentMethod": "transfer",
+    "createdAt": "2025-09-18T04:48:55.982Z"
+  }
+]
